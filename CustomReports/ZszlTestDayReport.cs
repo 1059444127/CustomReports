@@ -136,8 +136,17 @@ namespace CustomReports
         /// <returns></returns>
         private int GetDays(T_JCXX jcxx)
         {
-            var bgrq = Convert.ToDateTime(jcxx.F_BGRQ).Date;
-            var sdrq = Convert.ToDateTime(jcxx.F_SDRQ).Date;
+            DateTime bgrq;
+            DateTime sdrq;
+            try
+            {
+                bgrq = Convert.ToDateTime(jcxx.F_BGRQ).Date;
+                sdrq = Convert.ToDateTime(jcxx.F_SDRQ).Date;
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
 
             //收到日期不应该大于报告日期 ,如果出现这种情况,说明数据有错误
             if (sdrq > bgrq)

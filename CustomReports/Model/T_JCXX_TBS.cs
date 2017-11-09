@@ -24,7 +24,7 @@ namespace CustomReports.Model
         public string F_FZ_BLZD { get; set; }
 
         [DisplayName("病历号")]
-        public string 病历号 => this.F_ZYH.Trim()+this.F_MZH.Trim();
+        public string 病历号 => this.F_ZYH.Trim() + this.F_MZH.Trim();
 
         [DisplayName("异常备注")]
         public string 异常备注 => this.F_WFBGYY.Trim() + this.F_SPARE9;

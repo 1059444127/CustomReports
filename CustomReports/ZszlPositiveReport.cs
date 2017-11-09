@@ -19,7 +19,10 @@ namespace CustomReports
         public ZszlPositiveReport()
         {
             InitializeComponent();
-            sqlFilterBindingSource.DataSource = new SqlFilter();
+            var filter = new SqlFilter();
+            filter.Bgrq1 = null;
+            filter.Bgrq2 = null;
+            sqlFilterBindingSource.DataSource = filter;
             var lstBlk = T_BLK_CS_DAL.GetAll();
             var lstXmfl = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_XMFL);
             var lstYzxm = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_FZBL_YZXM);

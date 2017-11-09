@@ -366,7 +366,7 @@ namespace CustomReports
             this.colF_YZXM.FieldName = "F_YZXM";
             this.colF_YZXM.Name = "colF_YZXM";
             this.colF_YZXM.Visible = true;
-            this.colF_YZXM.VisibleIndex = 4;
+            this.colF_YZXM.VisibleIndex = 5;
             // 
             // colF_ZYH
             // 
@@ -374,7 +374,7 @@ namespace CustomReports
             this.colF_ZYH.FieldName = "病历号";
             this.colF_ZYH.Name = "colF_ZYH";
             this.colF_ZYH.Visible = true;
-            this.colF_ZYH.VisibleIndex = 5;
+            this.colF_ZYH.VisibleIndex = 6;
             // 
             // colF_BGYS
             // 
@@ -382,7 +382,7 @@ namespace CustomReports
             this.colF_BGYS.FieldName = "F_BGYS";
             this.colF_BGYS.Name = "colF_BGYS";
             this.colF_BGYS.Visible = true;
-            this.colF_BGYS.VisibleIndex = 6;
+            this.colF_BGYS.VisibleIndex = 7;
             // 
             // colF_FZYS
             // 
@@ -390,7 +390,7 @@ namespace CustomReports
             this.colF_FZYS.FieldName = "F_FZYS";
             this.colF_FZYS.Name = "colF_FZYS";
             this.colF_FZYS.Visible = true;
-            this.colF_FZYS.VisibleIndex = 7;
+            this.colF_FZYS.VisibleIndex = 8;
             // 
             // col异常备注
             // 
@@ -398,7 +398,7 @@ namespace CustomReports
             this.col异常备注.FieldName = "异常备注";
             this.col异常备注.Name = "col异常备注";
             this.col异常备注.Visible = true;
-            this.col异常备注.VisibleIndex = 10;
+            this.col异常备注.VisibleIndex = 4;
             // 
             // colF_BGRQ
             // 
@@ -406,7 +406,7 @@ namespace CustomReports
             this.colF_BGRQ.FieldName = "F_BGRQ";
             this.colF_BGRQ.Name = "colF_BGRQ";
             this.colF_BGRQ.Visible = true;
-            this.colF_BGRQ.VisibleIndex = 8;
+            this.colF_BGRQ.VisibleIndex = 9;
             // 
             // colF_BGZT
             // 
@@ -414,7 +414,7 @@ namespace CustomReports
             this.colF_BGZT.FieldName = "F_BGZT";
             this.colF_BGZT.Name = "colF_BGZT";
             this.colF_BGZT.Visible = true;
-            this.colF_BGZT.VisibleIndex = 9;
+            this.colF_BGZT.VisibleIndex = 10;
             // 
             // ZszlExceptionReport
             // 

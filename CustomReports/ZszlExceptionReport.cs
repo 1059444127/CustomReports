@@ -69,7 +69,7 @@ namespace CustomReports
                     sqlWhere += $" and f_bblx='{sqlFilter.Xmfl}' ";
                 }
 
-                sqlWhere += " and ( trim(f_WFBGYY)!='' and trim(f_spare9)!= '' )";
+                sqlWhere += " and ( ltrim(rtrim(f_WFBGYY))!='' or ltrim(rtrim(f_spare9))!= '' )";
 
                 list1 = T_JCXX_DAL.GetBySqlWhere(sqlWhere);
             }
