@@ -39,28 +39,27 @@ namespace CustomReports
             this.Sdrq1DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.Sdrq2DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.XmflComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.Bgrq1DateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.Bgrq2DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForPathLib = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForSdrq1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForSdrq2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.ItemForBgzt = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForXmfl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForBgzt = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForBgrq1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForBgrq2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.tJCXXBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colF_BLH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_XM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_XB = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_NL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_YZXM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_ZYH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_BGYS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_FZYS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col异常备注 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_BGRQ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_BGZT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col序号 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col类别 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col总人次数 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col无诊断对比人次数 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col诊断符合人次数 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col临床诊断与病理诊断符合率 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -73,16 +72,22 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XmflComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq1DateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq1DateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq2DateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq2DateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPathLib)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSdrq1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSdrq2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgzt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForXmfl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgzt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgrq1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgrq2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tJCXXBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,8 +113,16 @@ namespace CustomReports
             this.dataLayoutControl1.Controls.Add(this.Sdrq1DateEdit);
             this.dataLayoutControl1.Controls.Add(this.Sdrq2DateEdit);
             this.dataLayoutControl1.Controls.Add(this.XmflComboBoxEdit);
+            this.dataLayoutControl1.Controls.Add(this.Bgrq1DateEdit);
+            this.dataLayoutControl1.Controls.Add(this.Bgrq2DateEdit);
             this.dataLayoutControl1.DataSource = this.sqlFilterBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLayoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForPathLib,
+            this.ItemForSdrq1,
+            this.ItemForSdrq2,
+            this.ItemForXmfl,
+            this.ItemForBgzt});
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(1);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -199,33 +212,35 @@ namespace CustomReports
             this.XmflComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.XmflComboBoxEdit.TabIndex = 11;
             // 
-            // layoutControlGroup1
+            // Bgrq1DateEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(221, 464);
-            this.layoutControlGroup1.TextVisible = false;
+            this.Bgrq1DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Bgrq1", true));
+            this.Bgrq1DateEdit.EditValue = null;
+            this.Bgrq1DateEdit.Location = new System.Drawing.Point(75, 12);
+            this.Bgrq1DateEdit.Name = "Bgrq1DateEdit";
+            this.Bgrq1DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.Bgrq1DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Bgrq1DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Bgrq1DateEdit.Size = new System.Drawing.Size(134, 20);
+            this.Bgrq1DateEdit.StyleController = this.dataLayoutControl1;
+            this.Bgrq1DateEdit.TabIndex = 12;
             // 
-            // layoutControlGroup2
+            // Bgrq2DateEdit
             // 
-            this.layoutControlGroup2.AllowDrawBackground = false;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForPathLib,
-            this.ItemForSdrq1,
-            this.ItemForSdrq2,
-            this.emptySpaceItem1,
-            this.ItemForBgzt,
-            this.ItemForXmfl});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup2.Size = new System.Drawing.Size(201, 444);
+            this.Bgrq2DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Bgrq2", true));
+            this.Bgrq2DateEdit.EditValue = null;
+            this.Bgrq2DateEdit.Location = new System.Drawing.Point(75, 36);
+            this.Bgrq2DateEdit.Name = "Bgrq2DateEdit";
+            this.Bgrq2DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.Bgrq2DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Bgrq2DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Bgrq2DateEdit.Size = new System.Drawing.Size(134, 20);
+            this.Bgrq2DateEdit.StyleController = this.dataLayoutControl1;
+            this.Bgrq2DateEdit.TabIndex = 13;
             // 
             // ItemForPathLib
             // 
@@ -248,28 +263,11 @@ namespace CustomReports
             // ItemForSdrq2
             // 
             this.ItemForSdrq2.Control = this.Sdrq2DateEdit;
-            this.ItemForSdrq2.Location = new System.Drawing.Point(0, 96);
+            this.ItemForSdrq2.Location = new System.Drawing.Point(0, 72);
             this.ItemForSdrq2.Name = "ItemForSdrq2";
-            this.ItemForSdrq2.Size = new System.Drawing.Size(201, 24);
+            this.ItemForSdrq2.Size = new System.Drawing.Size(201, 48);
             this.ItemForSdrq2.Text = "收到日期2";
             this.ItemForSdrq2.TextSize = new System.Drawing.Size(55, 14);
-            // 
-            // emptySpaceItem1
-            // 
-            this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 120);
-            this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(201, 324);
-            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // ItemForBgzt
-            // 
-            this.ItemForBgzt.Control = this.BgztImageComboBoxEdit;
-            this.ItemForBgzt.Location = new System.Drawing.Point(0, 24);
-            this.ItemForBgzt.Name = "ItemForBgzt";
-            this.ItemForBgzt.Size = new System.Drawing.Size(201, 24);
-            this.ItemForBgzt.Text = "报告状态";
-            this.ItemForBgzt.TextSize = new System.Drawing.Size(55, 14);
             // 
             // ItemForXmfl
             // 
@@ -280,9 +278,69 @@ namespace CustomReports
             this.ItemForXmfl.Text = "项目分类";
             this.ItemForXmfl.TextSize = new System.Drawing.Size(55, 14);
             // 
+            // ItemForBgzt
+            // 
+            this.ItemForBgzt.Control = this.BgztImageComboBoxEdit;
+            this.ItemForBgzt.Location = new System.Drawing.Point(0, 0);
+            this.ItemForBgzt.Name = "ItemForBgzt";
+            this.ItemForBgzt.Size = new System.Drawing.Size(201, 48);
+            this.ItemForBgzt.Text = "报告状态";
+            this.ItemForBgzt.TextSize = new System.Drawing.Size(55, 14);
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 8;
+            this.layoutControlGroup1.Size = new System.Drawing.Size(221, 464);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.AllowDrawBackground = false;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForBgrq1,
+            this.ItemForBgrq2,
+            this.emptySpaceItem1});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup2.OptionsItemText.TextToControlDistance = 8;
+            this.layoutControlGroup2.Size = new System.Drawing.Size(201, 444);
+            // 
+            // ItemForBgrq1
+            // 
+            this.ItemForBgrq1.Control = this.Bgrq1DateEdit;
+            this.ItemForBgrq1.Location = new System.Drawing.Point(0, 0);
+            this.ItemForBgrq1.Name = "ItemForBgrq1";
+            this.ItemForBgrq1.Size = new System.Drawing.Size(201, 24);
+            this.ItemForBgrq1.Text = "报告日期1";
+            this.ItemForBgrq1.TextSize = new System.Drawing.Size(55, 14);
+            // 
+            // ItemForBgrq2
+            // 
+            this.ItemForBgrq2.Control = this.Bgrq2DateEdit;
+            this.ItemForBgrq2.Location = new System.Drawing.Point(0, 24);
+            this.ItemForBgrq2.Name = "ItemForBgrq2";
+            this.ItemForBgrq2.Size = new System.Drawing.Size(201, 24);
+            this.ItemForBgrq2.Text = "报告日期2";
+            this.ItemForBgrq2.TextSize = new System.Drawing.Size(55, 14);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 48);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(201, 396);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.tJCXXBindingSource;
+            this.gridControl1.DataSource = this.reportItemBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
@@ -294,24 +352,19 @@ namespace CustomReports
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // tJCXXBindingSource
+            // reportItemBindingSource
             // 
-            this.tJCXXBindingSource.DataSource = typeof(CustomReports.Model.T_JCXX);
+            this.reportItemBindingSource.DataSource = typeof(CustomReports.GzzsfyMonthlyReport.ReportItem);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colF_BLH,
-            this.colF_XM,
-            this.colF_XB,
-            this.colF_NL,
-            this.colF_YZXM,
-            this.col异常备注,
-            this.colF_ZYH,
-            this.colF_BGYS,
-            this.colF_FZYS,
-            this.colF_BGRQ,
-            this.colF_BGZT});
+            this.col序号,
+            this.col类别,
+            this.col总人次数,
+            this.col无诊断对比人次数,
+            this.col诊断符合人次数,
+            this.col临床诊断与病理诊断符合率});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "F_BLH", null, "合计:{0}")});
@@ -323,106 +376,68 @@ namespace CustomReports
             this.gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.gridView1.OptionsView.AllowCellMerge = true;
             this.gridView1.OptionsView.ColumnAutoWidth = false;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupedColumns = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // colF_BLH
+            // col序号
             // 
-            this.colF_BLH.Caption = "分子编号";
-            this.colF_BLH.FieldName = "F_BLH";
-            this.colF_BLH.Name = "colF_BLH";
-            this.colF_BLH.Visible = true;
-            this.colF_BLH.VisibleIndex = 0;
+            this.col序号.FieldName = "序号";
+            this.col序号.Name = "col序号";
+            this.col序号.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.col序号.Visible = true;
+            this.col序号.VisibleIndex = 0;
             // 
-            // colF_XM
+            // col类别
             // 
-            this.colF_XM.Caption = "姓名";
-            this.colF_XM.FieldName = "F_XM";
-            this.colF_XM.Name = "colF_XM";
-            this.colF_XM.Visible = true;
-            this.colF_XM.VisibleIndex = 1;
+            this.col类别.FieldName = "类别";
+            this.col类别.Name = "col类别";
+            this.col类别.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.col类别.Visible = true;
+            this.col类别.VisibleIndex = 1;
             // 
-            // colF_XB
+            // col总人次数
             // 
-            this.colF_XB.Caption = "性别";
-            this.colF_XB.FieldName = "F_XB";
-            this.colF_XB.Name = "colF_XB";
-            this.colF_XB.Visible = true;
-            this.colF_XB.VisibleIndex = 2;
+            this.col总人次数.FieldName = "总人次数";
+            this.col总人次数.Name = "col总人次数";
+            this.col总人次数.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.col总人次数.Visible = true;
+            this.col总人次数.VisibleIndex = 2;
             // 
-            // colF_NL
+            // col无诊断对比人次数
             // 
-            this.colF_NL.Caption = "年龄";
-            this.colF_NL.FieldName = "F_NL";
-            this.colF_NL.Name = "colF_NL";
-            this.colF_NL.Visible = true;
-            this.colF_NL.VisibleIndex = 3;
+            this.col无诊断对比人次数.FieldName = "无诊断对比人次数";
+            this.col无诊断对比人次数.Name = "col无诊断对比人次数";
+            this.col无诊断对比人次数.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.col无诊断对比人次数.Visible = true;
+            this.col无诊断对比人次数.VisibleIndex = 3;
             // 
-            // colF_YZXM
+            // col诊断符合人次数
             // 
-            this.colF_YZXM.Caption = "检测项目";
-            this.colF_YZXM.FieldName = "F_YZXM";
-            this.colF_YZXM.Name = "colF_YZXM";
-            this.colF_YZXM.Visible = true;
-            this.colF_YZXM.VisibleIndex = 4;
+            this.col诊断符合人次数.FieldName = "诊断符合人次数";
+            this.col诊断符合人次数.Name = "col诊断符合人次数";
+            this.col诊断符合人次数.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.col诊断符合人次数.Visible = true;
+            this.col诊断符合人次数.VisibleIndex = 4;
             // 
-            // colF_ZYH
+            // col临床诊断与病理诊断符合率
             // 
-            this.colF_ZYH.Caption = "病历号";
-            this.colF_ZYH.FieldName = "病历号";
-            this.colF_ZYH.Name = "colF_ZYH";
-            this.colF_ZYH.Visible = true;
-            this.colF_ZYH.VisibleIndex = 6;
+            this.col临床诊断与病理诊断符合率.FieldName = "临床诊断与病理诊断符合率";
+            this.col临床诊断与病理诊断符合率.Name = "col临床诊断与病理诊断符合率";
+            this.col临床诊断与病理诊断符合率.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.col临床诊断与病理诊断符合率.OptionsColumn.ReadOnly = true;
+            this.col临床诊断与病理诊断符合率.Visible = true;
+            this.col临床诊断与病理诊断符合率.VisibleIndex = 5;
             // 
-            // colF_BGYS
-            // 
-            this.colF_BGYS.Caption = "报告医生";
-            this.colF_BGYS.FieldName = "F_BGYS";
-            this.colF_BGYS.Name = "colF_BGYS";
-            this.colF_BGYS.Visible = true;
-            this.colF_BGYS.VisibleIndex = 7;
-            // 
-            // colF_FZYS
-            // 
-            this.colF_FZYS.Caption = "检测者";
-            this.colF_FZYS.FieldName = "F_FZYS";
-            this.colF_FZYS.Name = "colF_FZYS";
-            this.colF_FZYS.Visible = true;
-            this.colF_FZYS.VisibleIndex = 8;
-            // 
-            // col异常备注
-            // 
-            this.col异常备注.Caption = "备注";
-            this.col异常备注.FieldName = "异常备注";
-            this.col异常备注.Name = "col异常备注";
-            this.col异常备注.Visible = true;
-            this.col异常备注.VisibleIndex = 5;
-            // 
-            // colF_BGRQ
-            // 
-            this.colF_BGRQ.Caption = "报告日期";
-            this.colF_BGRQ.FieldName = "F_BGRQ";
-            this.colF_BGRQ.Name = "colF_BGRQ";
-            this.colF_BGRQ.Visible = true;
-            this.colF_BGRQ.VisibleIndex = 9;
-            // 
-            // colF_BGZT
-            // 
-            this.colF_BGZT.Caption = "报告状态";
-            this.colF_BGZT.FieldName = "F_BGZT";
-            this.colF_BGZT.Name = "colF_BGZT";
-            this.colF_BGZT.Visible = true;
-            this.colF_BGZT.VisibleIndex = 10;
-            // 
-            // ZszlExceptionReport
+            // GzzsfyMonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
             this.Margin = new System.Windows.Forms.Padding(1);
-            this.Name = "ZszlExceptionReport";
+            this.Name = "GzzsfyMonthlyReport";
             this.Size = new System.Drawing.Size(827, 464);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
@@ -436,16 +451,22 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XmflComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq1DateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq1DateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq2DateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bgrq2DateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPathLib)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSdrq1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSdrq2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgzt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForXmfl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgzt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgrq1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBgrq2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tJCXXBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportItemBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -461,7 +482,6 @@ namespace CustomReports
         private System.Windows.Forms.BindingSource sqlFilterBindingSource;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForPathLib;
-        private System.Windows.Forms.BindingSource tJCXXBindingSource;
         private DevExpress.XtraEditors.ComboBoxEdit PathLibImageComboBoxEdit;
         private DevExpress.XtraEditors.ImageComboBoxEdit BgztImageComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBgzt;
@@ -472,16 +492,16 @@ namespace CustomReports
         private DevExpress.XtraLayout.LayoutControlItem ItemForSdrq2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForXmfl;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_BLH;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_XM;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_XB;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_NL;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_YZXM;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_ZYH;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_BGYS;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_FZYS;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_BGRQ;
-        private DevExpress.XtraGrid.Columns.GridColumn colF_BGZT;
-        private DevExpress.XtraGrid.Columns.GridColumn col异常备注;
+        private DevExpress.XtraEditors.DateEdit Bgrq1DateEdit;
+        private DevExpress.XtraEditors.DateEdit Bgrq2DateEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForBgrq1;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForBgrq2;
+        private System.Windows.Forms.BindingSource reportItemBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn col序号;
+        private DevExpress.XtraGrid.Columns.GridColumn col类别;
+        private DevExpress.XtraGrid.Columns.GridColumn col总人次数;
+        private DevExpress.XtraGrid.Columns.GridColumn col无诊断对比人次数;
+        private DevExpress.XtraGrid.Columns.GridColumn col诊断符合人次数;
+        private DevExpress.XtraGrid.Columns.GridColumn col临床诊断与病理诊断符合率;
     }
 }

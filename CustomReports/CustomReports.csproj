@@ -130,7 +130,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -170,6 +169,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\DataSources\CustomReports.Model.T_JCXX.datasource" />
+    <None Include="Properties\DataSources\GzzsfyMonthlyReport.ReportItem.datasource" />
     <None Include="Properties\DataSources\SqlFilter.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
