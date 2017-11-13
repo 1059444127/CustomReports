@@ -23,6 +23,10 @@ namespace CustomReports
             sqlFilterBindingSource.DataSource = new SqlFilter();
             var lstBlk = T_BLK_CS_DAL.GetAll();
             var lstXmfl = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_XMFL);
+            var lstYzxm = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_FZBL_YZXM).Select(o=>o.CycMc).ToList();
+
+            lstYzxm.Insert(0,"");
+            YzxmLookUpEdit.Properties.DataSource = lstYzxm;
 
             foreach (var blkCs in lstBlk)
                 PathLibImageComboBoxEdit.Properties.Items.Add(blkCs.F_BLKMC);
@@ -67,6 +71,12 @@ namespace CustomReports
                 if (sqlFilter.Xmfl != null && (sqlFilter.Xmfl != "全部" && sqlFilter.Xmfl.Trim() != ""))
                 {
                     sqlWhere += $" and f_bblx='{sqlFilter.Xmfl}' ";
+                }
+
+                //医嘱项目
+                if (string.IsNullOrEmpty(sqlFilter.Yzxm.Trim()) == false && sqlFilter.Yzxm!="全部")
+                {
+                    sqlWhere += $" and f_yzxm = '{sqlFilter.Yzxm}' ";
                 }
 
                 sqlWhere += " and ( ltrim(rtrim(f_WFBGYY))!='' or ltrim(rtrim(f_spare9))!= '' )";

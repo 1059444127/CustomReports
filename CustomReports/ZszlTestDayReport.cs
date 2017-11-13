@@ -25,11 +25,16 @@ namespace CustomReports
             sqlFilterBindingSource.DataSource = new SqlFilter();
             var lstBlk = T_BLK_CS_DAL.GetAll();
             var lstXmfl = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_XMFL);
+            var lstYzxm = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_FZBL_YZXM).Select(o=>o.CycMc).ToList();
+
+            lstYzxm.Insert(0,"");
 
             foreach (var blkCs in lstBlk)
                 PathLibImageComboBoxEdit.Properties.Items.Add(blkCs.F_BLKMC);
 
             lstXmfl.ForEach(o => XmflComboBoxEdit.Properties.Items.Add(o.CycMc));
+
+            YzxmLookUpEdit.Properties.DataSource = lstYzxm;
         }
 
         #region Implementation of IReport
@@ -67,6 +72,12 @@ namespace CustomReports
                 else
                 {
                     sqlWhere += $" and f_bgzt in ('已写报告','已审核') ";
+                }
+
+                //医嘱项目
+                if (string.IsNullOrEmpty(sqlFilter.Yzxm)==false && sqlFilter.Yzxm!="全部")
+                {
+                    sqlWhere += $" and f_bgzt = '{sqlFilter.Yzxm}' ";
                 }
 
                 //项目分类

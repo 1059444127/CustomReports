@@ -31,5 +31,11 @@ namespace CustomReports.Model
 
         [DisplayName("报告发放天数")]
         public int 发放天数 { get; set; }
+
+        [DisplayName("DNA/RNA浓度")]
+        public string F_DNAZK { get; set; }
+
+        [DisplayName("病理质控")]
+        public string F_RNAZK { get; set; }
     }
 }

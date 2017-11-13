@@ -105,7 +105,7 @@ namespace CustomReports
                     " ((f_fz_blzd like '%突变型%' or F_FZ_BLZD like '%阳性%' or F_FZ_BLZD like '%不稳定%' )and( f_fz_blzd not LIKE '%未见%' and f_fz_blzd not LIKE '%微卫星稳定%')) ";
 
                 string sql =
-                    $"select t.*,t2.f_fz_blzd from t_jcxx t  inner join (select f_blh,f_fz_blzd from T_TBS_BG) t2 on t.F_BLH=t2.F_BLH where ";
+                    $"select t.*,t2.f_fz_blzd,t2.F_dnazk,t2.F_RNAZK  from t_jcxx t inner join (select f_blh,f_fz_blzd,F_dnazk,F_RNAZK from T_TBS_BG) t2 on t.F_BLH=t2.F_BLH where ";
                 sql += sqlWhere;
 
                 var dt1 = CommonDAL.GetTableBySql(sql);
@@ -113,6 +113,8 @@ namespace CustomReports
                 {
                     var jcxx = T_JCXX_DAL.DataRowToModel(dr);
                     jcxx.F_FZ_BLZD = dr["f_fz_blzd"].ToString();
+                    jcxx.F_DNAZK = dr["F_dnazk"].ToString();
+                    jcxx.F_RNAZK = dr["F_RNAZK"].ToString();
                     list1.Add(jcxx);
                 }
             }

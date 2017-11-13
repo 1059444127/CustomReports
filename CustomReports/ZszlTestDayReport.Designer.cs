@@ -78,6 +78,8 @@ namespace CustomReports
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.YzxmLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.ItemForYzxm = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -111,20 +113,22 @@ namespace CustomReports
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YzxmLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYzxm)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(1);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.dataLayoutControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(827, 464);
-            this.splitContainerControl1.SplitterPosition = 221;
+            this.splitContainerControl1.Size = new System.Drawing.Size(2008, 1193);
+            this.splitContainerControl1.SplitterPosition = 537;
             this.splitContainerControl1.TabIndex = 5;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -137,33 +141,36 @@ namespace CustomReports
             this.dataLayoutControl1.Controls.Add(this.Sdrq1DateEdit);
             this.dataLayoutControl1.Controls.Add(this.Sdrq2DateEdit);
             this.dataLayoutControl1.Controls.Add(this.XmflComboBoxEdit);
+            this.dataLayoutControl1.Controls.Add(this.YzxmLookUpEdit);
             this.dataLayoutControl1.DataSource = this.sqlFilterBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(1);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(221, 464);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(537, 1193);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // chkDisable7
             // 
             this.chkDisable7.EditValue = true;
-            this.chkDisable7.Location = new System.Drawing.Point(75, 155);
+            this.chkDisable7.Location = new System.Drawing.Point(174, 388);
+            this.chkDisable7.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.chkDisable7.Name = "chkDisable7";
             this.chkDisable7.Properties.Caption = "";
-            this.chkDisable7.Size = new System.Drawing.Size(134, 19);
+            this.chkDisable7.Size = new System.Drawing.Size(333, 34);
             this.chkDisable7.StyleController = this.dataLayoutControl1;
             this.chkDisable7.TabIndex = 7;
             // 
             // chkDisable6
             // 
             this.chkDisable6.EditValue = true;
-            this.chkDisable6.Location = new System.Drawing.Point(75, 132);
+            this.chkDisable6.Location = new System.Drawing.Point(174, 342);
+            this.chkDisable6.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.chkDisable6.Name = "chkDisable6";
             this.chkDisable6.Properties.Caption = "";
-            this.chkDisable6.Size = new System.Drawing.Size(134, 19);
+            this.chkDisable6.Size = new System.Drawing.Size(333, 34);
             this.chkDisable6.StyleController = this.dataLayoutControl1;
             this.chkDisable6.TabIndex = 6;
             // 
@@ -171,8 +178,8 @@ namespace CustomReports
             // 
             this.PathLibImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Blk", true));
             this.PathLibImageComboBoxEdit.EditValue = "全部";
-            this.PathLibImageComboBoxEdit.Location = new System.Drawing.Point(75, 12);
-            this.PathLibImageComboBoxEdit.Margin = new System.Windows.Forms.Padding(1);
+            this.PathLibImageComboBoxEdit.Location = new System.Drawing.Point(174, 30);
+            this.PathLibImageComboBoxEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PathLibImageComboBoxEdit.Name = "PathLibImageComboBoxEdit";
             this.PathLibImageComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -180,7 +187,7 @@ namespace CustomReports
             "全部"});
             this.PathLibImageComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.PathLibImageComboBoxEdit.Properties.UseCtrlScroll = true;
-            this.PathLibImageComboBoxEdit.Size = new System.Drawing.Size(134, 20);
+            this.PathLibImageComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.PathLibImageComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.PathLibImageComboBoxEdit.TabIndex = 0;
             // 
@@ -191,7 +198,8 @@ namespace CustomReports
             // BgztImageComboBoxEdit
             // 
             this.BgztImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Bgzt", true));
-            this.BgztImageComboBoxEdit.Location = new System.Drawing.Point(75, 36);
+            this.BgztImageComboBoxEdit.Location = new System.Drawing.Point(174, 82);
+            this.BgztImageComboBoxEdit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.BgztImageComboBoxEdit.Name = "BgztImageComboBoxEdit";
             this.BgztImageComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.BgztImageComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -202,7 +210,7 @@ namespace CustomReports
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("已写报告", CustomReports.Bgzts.已写报告, 2),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("已审核", CustomReports.Bgzts.已审核, 3)});
             this.BgztImageComboBoxEdit.Properties.UseCtrlScroll = true;
-            this.BgztImageComboBoxEdit.Size = new System.Drawing.Size(134, 20);
+            this.BgztImageComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.BgztImageComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.BgztImageComboBoxEdit.TabIndex = 2;
             // 
@@ -210,14 +218,15 @@ namespace CustomReports
             // 
             this.Sdrq1DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Sdrq1", true));
             this.Sdrq1DateEdit.EditValue = null;
-            this.Sdrq1DateEdit.Location = new System.Drawing.Point(75, 84);
+            this.Sdrq1DateEdit.Location = new System.Drawing.Point(174, 238);
+            this.Sdrq1DateEdit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Sdrq1DateEdit.Name = "Sdrq1DateEdit";
             this.Sdrq1DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.Sdrq1DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Sdrq1DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Sdrq1DateEdit.Size = new System.Drawing.Size(134, 20);
+            this.Sdrq1DateEdit.Size = new System.Drawing.Size(333, 42);
             this.Sdrq1DateEdit.StyleController = this.dataLayoutControl1;
             this.Sdrq1DateEdit.TabIndex = 4;
             // 
@@ -225,25 +234,27 @@ namespace CustomReports
             // 
             this.Sdrq2DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Sdrq2", true));
             this.Sdrq2DateEdit.EditValue = null;
-            this.Sdrq2DateEdit.Location = new System.Drawing.Point(75, 108);
+            this.Sdrq2DateEdit.Location = new System.Drawing.Point(174, 290);
+            this.Sdrq2DateEdit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.Sdrq2DateEdit.Name = "Sdrq2DateEdit";
             this.Sdrq2DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.Sdrq2DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Sdrq2DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Sdrq2DateEdit.Size = new System.Drawing.Size(134, 20);
+            this.Sdrq2DateEdit.Size = new System.Drawing.Size(333, 42);
             this.Sdrq2DateEdit.StyleController = this.dataLayoutControl1;
             this.Sdrq2DateEdit.TabIndex = 5;
             // 
             // XmflComboBoxEdit
             // 
             this.XmflComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Xmfl", true));
-            this.XmflComboBoxEdit.Location = new System.Drawing.Point(75, 60);
+            this.XmflComboBoxEdit.Location = new System.Drawing.Point(174, 134);
+            this.XmflComboBoxEdit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.XmflComboBoxEdit.Name = "XmflComboBoxEdit";
             this.XmflComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.XmflComboBoxEdit.Size = new System.Drawing.Size(134, 20);
+            this.XmflComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.XmflComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.XmflComboBoxEdit.TabIndex = 3;
             // 
@@ -256,7 +267,7 @@ namespace CustomReports
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(221, 464);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(537, 1193);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -271,90 +282,92 @@ namespace CustomReports
             this.ItemForBgzt,
             this.ItemForXmfl,
             this.layoutControlItem1,
-            this.layoutControlItem2});
+            this.layoutControlItem2,
+            this.ItemForYzxm});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup2.Size = new System.Drawing.Size(201, 444);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(487, 1143);
             // 
             // ItemForPathLib
             // 
             this.ItemForPathLib.Control = this.PathLibImageComboBoxEdit;
             this.ItemForPathLib.Location = new System.Drawing.Point(0, 0);
             this.ItemForPathLib.Name = "ItemForPathLib";
-            this.ItemForPathLib.Size = new System.Drawing.Size(201, 24);
+            this.ItemForPathLib.Size = new System.Drawing.Size(487, 52);
             this.ItemForPathLib.Text = "病理库";
-            this.ItemForPathLib.TextSize = new System.Drawing.Size(55, 14);
+            this.ItemForPathLib.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForSdrq1
             // 
             this.ItemForSdrq1.Control = this.Sdrq1DateEdit;
-            this.ItemForSdrq1.Location = new System.Drawing.Point(0, 72);
+            this.ItemForSdrq1.Location = new System.Drawing.Point(0, 208);
             this.ItemForSdrq1.Name = "ItemForSdrq1";
-            this.ItemForSdrq1.Size = new System.Drawing.Size(201, 24);
+            this.ItemForSdrq1.Size = new System.Drawing.Size(487, 52);
             this.ItemForSdrq1.Text = "收到日期1";
-            this.ItemForSdrq1.TextSize = new System.Drawing.Size(55, 14);
+            this.ItemForSdrq1.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForSdrq2
             // 
             this.ItemForSdrq2.Control = this.Sdrq2DateEdit;
-            this.ItemForSdrq2.Location = new System.Drawing.Point(0, 96);
+            this.ItemForSdrq2.Location = new System.Drawing.Point(0, 260);
             this.ItemForSdrq2.Name = "ItemForSdrq2";
-            this.ItemForSdrq2.Size = new System.Drawing.Size(201, 24);
+            this.ItemForSdrq2.Size = new System.Drawing.Size(487, 52);
             this.ItemForSdrq2.Text = "收到日期2";
-            this.ItemForSdrq2.TextSize = new System.Drawing.Size(55, 14);
+            this.ItemForSdrq2.TextSize = new System.Drawing.Size(136, 36);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 166);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 404);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(201, 278);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(487, 739);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForBgzt
             // 
             this.ItemForBgzt.Control = this.BgztImageComboBoxEdit;
-            this.ItemForBgzt.Location = new System.Drawing.Point(0, 24);
+            this.ItemForBgzt.Location = new System.Drawing.Point(0, 52);
             this.ItemForBgzt.Name = "ItemForBgzt";
-            this.ItemForBgzt.Size = new System.Drawing.Size(201, 24);
+            this.ItemForBgzt.Size = new System.Drawing.Size(487, 52);
             this.ItemForBgzt.Text = "报告状态";
-            this.ItemForBgzt.TextSize = new System.Drawing.Size(55, 14);
+            this.ItemForBgzt.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForXmfl
             // 
             this.ItemForXmfl.Control = this.XmflComboBoxEdit;
-            this.ItemForXmfl.Location = new System.Drawing.Point(0, 48);
+            this.ItemForXmfl.Location = new System.Drawing.Point(0, 104);
             this.ItemForXmfl.Name = "ItemForXmfl";
-            this.ItemForXmfl.Size = new System.Drawing.Size(201, 24);
+            this.ItemForXmfl.Size = new System.Drawing.Size(487, 52);
             this.ItemForXmfl.Text = "项目分类";
-            this.ItemForXmfl.TextSize = new System.Drawing.Size(55, 14);
+            this.ItemForXmfl.TextSize = new System.Drawing.Size(136, 36);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.chkDisable6;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 120);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 312);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(201, 23);
+            this.layoutControlItem1.Size = new System.Drawing.Size(487, 46);
             this.layoutControlItem1.Text = "去掉周六";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(55, 14);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(136, 36);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chkDisable7;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 143);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 358);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(201, 23);
+            this.layoutControlItem2.Size = new System.Drawing.Size(487, 46);
             this.layoutControlItem2.Text = "去掉周日";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(55, 14);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(136, 36);
             // 
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(601, 464);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1458, 1193);
             this.xtraTabControl1.TabIndex = 6;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -363,20 +376,21 @@ namespace CustomReports
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.gridControl1);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(595, 435);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1442, 1121);
             this.xtraTabPage1.Text = "明细";
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.tJCXXBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(595, 435);
+            this.gridControl1.Size = new System.Drawing.Size(1442, 1121);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -559,19 +573,20 @@ namespace CustomReports
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.gridControl2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(595, 435);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1424, 1121);
             this.xtraTabPage2.Text = "汇总";
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl2.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Margin = new System.Windows.Forms.Padding(1);
+            this.gridControl2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(595, 435);
+            this.gridControl2.Size = new System.Drawing.Size(1424, 1121);
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -613,14 +628,37 @@ namespace CustomReports
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
+            // YzxmLookUpEdit
+            // 
+            this.YzxmLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Yzxm", true));
+            this.YzxmLookUpEdit.Location = new System.Drawing.Point(174, 186);
+            this.YzxmLookUpEdit.Name = "YzxmLookUpEdit";
+            this.YzxmLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.YzxmLookUpEdit.Properties.NullText = "";
+            this.YzxmLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.YzxmLookUpEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.YzxmLookUpEdit.Size = new System.Drawing.Size(333, 42);
+            this.YzxmLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.YzxmLookUpEdit.TabIndex = 8;
+            // 
+            // ItemForYzxm
+            // 
+            this.ItemForYzxm.Control = this.YzxmLookUpEdit;
+            this.ItemForYzxm.Location = new System.Drawing.Point(0, 156);
+            this.ItemForYzxm.Name = "ItemForYzxm";
+            this.ItemForYzxm.Size = new System.Drawing.Size(487, 52);
+            this.ItemForYzxm.Text = "检测项目";
+            this.ItemForYzxm.TextSize = new System.Drawing.Size(136, 36);
+            // 
             // ZszlTestDayReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "ZszlTestDayReport";
-            this.Size = new System.Drawing.Size(827, 464);
+            this.Size = new System.Drawing.Size(2008, 1193);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
@@ -654,6 +692,8 @@ namespace CustomReports
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YzxmLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForYzxm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -707,5 +747,7 @@ namespace CustomReports
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraEditors.LookUpEdit YzxmLookUpEdit;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForYzxm;
     }
 }
