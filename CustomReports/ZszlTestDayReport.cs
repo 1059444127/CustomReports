@@ -77,7 +77,7 @@ namespace CustomReports
                 //医嘱项目
                 if (string.IsNullOrEmpty(sqlFilter.Yzxm)==false && sqlFilter.Yzxm!="全部")
                 {
-                    sqlWhere += $" and f_bgzt = '{sqlFilter.Yzxm}' ";
+                    sqlWhere += $" and f_yzxm = '{sqlFilter.Yzxm}' ";
                 }
 
                 //项目分类

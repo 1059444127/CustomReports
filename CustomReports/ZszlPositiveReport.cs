@@ -25,13 +25,15 @@ namespace CustomReports
             sqlFilterBindingSource.DataSource = filter;
             var lstBlk = T_BLK_CS_DAL.GetAll();
             var lstXmfl = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_XMFL);
-            var lstYzxm = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_FZBL_YZXM);
+            var lstYzxm = T_CYC_DAL.GetListByFl(T_CYC_DAL.Dict.F_FZBL_YZXM).Select(o=>o.CycMc).ToList();
+            lstYzxm.Insert(0,"");
+
 
             foreach (var blkCs in lstBlk)
                 PathLibImageComboBoxEdit.Properties.Items.Add(blkCs.F_BLKMC);
 
             lstXmfl.ForEach(o => XmflComboBoxEdit.Properties.Items.Add(o.CycMc));
-            lstYzxm.ForEach(o => YzxmComboBoxEdit.Properties.Items.Add(o.CycMc));
+            YzxmLookUpEdit.Properties.DataSource = lstYzxm;
         }
 
         #region Implementation of IReport

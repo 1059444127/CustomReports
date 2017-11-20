@@ -41,7 +41,6 @@ namespace CustomReports
             this.Sdrq1DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.Sdrq2DateEdit = new DevExpress.XtraEditors.DateEdit();
             this.XmflComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.YzxmComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.IsPositiveCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.LczdTextEdit = new DevExpress.XtraEditors.MemoEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -69,11 +68,12 @@ namespace CustomReports
             this.colF_BGYS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_FZYS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_FZ_BLZD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_BGRQ = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colF_BGZT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_DNAZK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_RNAZK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_LCZD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colF_BGRQ = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colF_BGZT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.YzxmLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -90,7 +90,6 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XmflComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YzxmComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsPositiveCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LczdTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -109,6 +108,7 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tJCXXBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YzxmLookUpEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerControl1
@@ -135,9 +135,9 @@ namespace CustomReports
             this.dataLayoutControl1.Controls.Add(this.Sdrq1DateEdit);
             this.dataLayoutControl1.Controls.Add(this.Sdrq2DateEdit);
             this.dataLayoutControl1.Controls.Add(this.XmflComboBoxEdit);
-            this.dataLayoutControl1.Controls.Add(this.YzxmComboBoxEdit);
             this.dataLayoutControl1.Controls.Add(this.IsPositiveCheckEdit);
             this.dataLayoutControl1.Controls.Add(this.LczdTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.YzxmLookUpEdit);
             this.dataLayoutControl1.DataSource = this.sqlFilterBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -264,18 +264,6 @@ namespace CustomReports
             this.XmflComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.XmflComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.XmflComboBoxEdit.TabIndex = 11;
-            // 
-            // YzxmComboBoxEdit
-            // 
-            this.YzxmComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Yzxm", true));
-            this.YzxmComboBoxEdit.Location = new System.Drawing.Point(174, 186);
-            this.YzxmComboBoxEdit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.YzxmComboBoxEdit.Name = "YzxmComboBoxEdit";
-            this.YzxmComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.YzxmComboBoxEdit.Size = new System.Drawing.Size(333, 42);
-            this.YzxmComboBoxEdit.StyleController = this.dataLayoutControl1;
-            this.YzxmComboBoxEdit.TabIndex = 12;
             // 
             // IsPositiveCheckEdit
             // 
@@ -423,7 +411,7 @@ namespace CustomReports
             // 
             // ItemForYzxm
             // 
-            this.ItemForYzxm.Control = this.YzxmComboBoxEdit;
+            this.ItemForYzxm.Control = this.YzxmLookUpEdit;
             this.ItemForYzxm.Location = new System.Drawing.Point(0, 156);
             this.ItemForYzxm.Name = "ItemForYzxm";
             this.ItemForYzxm.Size = new System.Drawing.Size(487, 52);
@@ -564,24 +552,6 @@ namespace CustomReports
             this.colF_FZ_BLZD.VisibleIndex = 8;
             this.colF_FZ_BLZD.Width = 167;
             // 
-            // colF_BGRQ
-            // 
-            this.colF_BGRQ.Caption = "报告日期";
-            this.colF_BGRQ.FieldName = "F_BGRQ";
-            this.colF_BGRQ.Name = "colF_BGRQ";
-            this.colF_BGRQ.Visible = true;
-            this.colF_BGRQ.VisibleIndex = 12;
-            this.colF_BGRQ.Width = 167;
-            // 
-            // colF_BGZT
-            // 
-            this.colF_BGZT.Caption = "报告状态";
-            this.colF_BGZT.FieldName = "F_BGZT";
-            this.colF_BGZT.Name = "colF_BGZT";
-            this.colF_BGZT.Visible = true;
-            this.colF_BGZT.VisibleIndex = 13;
-            this.colF_BGZT.Width = 167;
-            // 
             // colF_DNAZK
             // 
             this.colF_DNAZK.FieldName = "F_DNAZK";
@@ -607,6 +577,36 @@ namespace CustomReports
             this.colF_LCZD.VisibleIndex = 10;
             this.colF_LCZD.Width = 167;
             // 
+            // colF_BGRQ
+            // 
+            this.colF_BGRQ.Caption = "报告日期";
+            this.colF_BGRQ.FieldName = "F_BGRQ";
+            this.colF_BGRQ.Name = "colF_BGRQ";
+            this.colF_BGRQ.Visible = true;
+            this.colF_BGRQ.VisibleIndex = 12;
+            this.colF_BGRQ.Width = 167;
+            // 
+            // colF_BGZT
+            // 
+            this.colF_BGZT.Caption = "报告状态";
+            this.colF_BGZT.FieldName = "F_BGZT";
+            this.colF_BGZT.Name = "colF_BGZT";
+            this.colF_BGZT.Visible = true;
+            this.colF_BGZT.VisibleIndex = 13;
+            this.colF_BGZT.Width = 167;
+            // 
+            // YzxmLookUpEdit
+            // 
+            this.YzxmLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Yzxm", true));
+            this.YzxmLookUpEdit.Location = new System.Drawing.Point(174, 186);
+            this.YzxmLookUpEdit.Name = "YzxmLookUpEdit";
+            this.YzxmLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.YzxmLookUpEdit.Properties.NullText = "";
+            this.YzxmLookUpEdit.Size = new System.Drawing.Size(333, 42);
+            this.YzxmLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.YzxmLookUpEdit.TabIndex = 15;
+            // 
             // ZszlPositiveReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
@@ -631,7 +631,6 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Sdrq2DateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XmflComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.YzxmComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IsPositiveCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LczdTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -650,6 +649,7 @@ namespace CustomReports
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tJCXXBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.YzxmLookUpEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,7 +678,6 @@ namespace CustomReports
         private DevExpress.XtraLayout.LayoutControlItem ItemForSdrq1;
         private DevExpress.XtraLayout.LayoutControlItem ItemForSdrq2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForXmfl;
-        private DevExpress.XtraEditors.ComboBoxEdit YzxmComboBoxEdit;
         private DevExpress.XtraEditors.CheckEdit IsPositiveCheckEdit;
         private DevExpress.XtraEditors.MemoEdit LczdTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForYzxm;
@@ -699,5 +698,6 @@ namespace CustomReports
         private DevExpress.XtraGrid.Columns.GridColumn colF_DNAZK;
         private DevExpress.XtraGrid.Columns.GridColumn colF_RNAZK;
         private DevExpress.XtraGrid.Columns.GridColumn colF_LCZD;
+        private DevExpress.XtraEditors.LookUpEdit YzxmLookUpEdit;
     }
 }
