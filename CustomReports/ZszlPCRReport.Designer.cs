@@ -60,6 +60,7 @@ namespace CustomReports
             this.colF_XM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_AGE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTBS_VALUE_DIFF = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col间隔天数 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_SDRQ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colF_BLZD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTBS_VALUE = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,8 +104,8 @@ namespace CustomReports
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1772, 1093);
-            this.splitContainerControl1.SplitterPosition = 474;
+            this.splitContainerControl1.Size = new System.Drawing.Size(2008, 1192);
+            this.splitContainerControl1.SplitterPosition = 537;
             this.splitContainerControl1.TabIndex = 5;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -122,7 +123,7 @@ namespace CustomReports
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(474, 1093);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(537, 1192);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -130,7 +131,7 @@ namespace CustomReports
             // 
             this.PathLibImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "PathLibs", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.PathLibImageComboBoxEdit.EditValue = CustomReports.PathLibs.全部;
-            this.PathLibImageComboBoxEdit.Location = new System.Drawing.Point(165, 30);
+            this.PathLibImageComboBoxEdit.Location = new System.Drawing.Point(174, 30);
             this.PathLibImageComboBoxEdit.Name = "PathLibImageComboBoxEdit";
             this.PathLibImageComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PathLibImageComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -141,7 +142,7 @@ namespace CustomReports
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("EBV", CustomReports.PathLibs.EBV, 1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("HBV", CustomReports.PathLibs.HBV, 2)});
             this.PathLibImageComboBoxEdit.Properties.UseCtrlScroll = true;
-            this.PathLibImageComboBoxEdit.Size = new System.Drawing.Size(279, 42);
+            this.PathLibImageComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.PathLibImageComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.PathLibImageComboBoxEdit.TabIndex = 4;
             // 
@@ -153,14 +154,14 @@ namespace CustomReports
             // 
             this.Sdrq1DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Sdrq1", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Sdrq1DateEdit.EditValue = null;
-            this.Sdrq1DateEdit.Location = new System.Drawing.Point(165, 82);
+            this.Sdrq1DateEdit.Location = new System.Drawing.Point(174, 82);
             this.Sdrq1DateEdit.Name = "Sdrq1DateEdit";
             this.Sdrq1DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.Sdrq1DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Sdrq1DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Sdrq1DateEdit.Size = new System.Drawing.Size(279, 42);
+            this.Sdrq1DateEdit.Size = new System.Drawing.Size(333, 42);
             this.Sdrq1DateEdit.StyleController = this.dataLayoutControl1;
             this.Sdrq1DateEdit.TabIndex = 5;
             // 
@@ -168,32 +169,32 @@ namespace CustomReports
             // 
             this.Sdrq2DateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Sdrq2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.Sdrq2DateEdit.EditValue = null;
-            this.Sdrq2DateEdit.Location = new System.Drawing.Point(165, 134);
+            this.Sdrq2DateEdit.Location = new System.Drawing.Point(174, 134);
             this.Sdrq2DateEdit.Name = "Sdrq2DateEdit";
             this.Sdrq2DateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.Sdrq2DateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Sdrq2DateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Sdrq2DateEdit.Size = new System.Drawing.Size(279, 42);
+            this.Sdrq2DateEdit.Size = new System.Drawing.Size(333, 42);
             this.Sdrq2DateEdit.StyleController = this.dataLayoutControl1;
             this.Sdrq2DateEdit.TabIndex = 6;
             // 
             // BLHTextEdit
             // 
             this.BLHTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "BLH", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.BLHTextEdit.Location = new System.Drawing.Point(165, 186);
+            this.BLHTextEdit.Location = new System.Drawing.Point(174, 186);
             this.BLHTextEdit.Name = "BLHTextEdit";
-            this.BLHTextEdit.Size = new System.Drawing.Size(279, 42);
+            this.BLHTextEdit.Size = new System.Drawing.Size(333, 42);
             this.BLHTextEdit.StyleController = this.dataLayoutControl1;
             this.BLHTextEdit.TabIndex = 7;
             // 
             // NameTextEdit
             // 
             this.NameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NameTextEdit.Location = new System.Drawing.Point(165, 238);
+            this.NameTextEdit.Location = new System.Drawing.Point(174, 238);
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(279, 42);
+            this.NameTextEdit.Size = new System.Drawing.Size(333, 42);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
             this.NameTextEdit.TabIndex = 8;
             // 
@@ -205,7 +206,7 @@ namespace CustomReports
             0,
             0,
             0});
-            this.ValueDiffTextEdit.Location = new System.Drawing.Point(165, 290);
+            this.ValueDiffTextEdit.Location = new System.Drawing.Point(174, 290);
             this.ValueDiffTextEdit.Name = "ValueDiffTextEdit";
             this.ValueDiffTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.ValueDiffTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -215,14 +216,14 @@ namespace CustomReports
             this.ValueDiffTextEdit.Properties.IsFloatValue = false;
             this.ValueDiffTextEdit.Properties.Mask.EditMask = "N0";
             this.ValueDiffTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.ValueDiffTextEdit.Size = new System.Drawing.Size(279, 42);
+            this.ValueDiffTextEdit.Size = new System.Drawing.Size(333, 42);
             this.ValueDiffTextEdit.StyleController = this.dataLayoutControl1;
             this.ValueDiffTextEdit.TabIndex = 9;
             // 
             // ReportStatusImageComboBoxEdit
             // 
             this.ReportStatusImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.sqlFilterBindingSource, "ReportStatus", true));
-            this.ReportStatusImageComboBoxEdit.Location = new System.Drawing.Point(165, 342);
+            this.ReportStatusImageComboBoxEdit.Location = new System.Drawing.Point(174, 342);
             this.ReportStatusImageComboBoxEdit.Name = "ReportStatusImageComboBoxEdit";
             this.ReportStatusImageComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.ReportStatusImageComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -234,7 +235,7 @@ namespace CustomReports
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("已审核", CustomReports.Model.ReportStatuses.已审核, 2),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("已写报告", CustomReports.Model.ReportStatuses.已写报告, 3)});
             this.ReportStatusImageComboBoxEdit.Properties.UseCtrlScroll = true;
-            this.ReportStatusImageComboBoxEdit.Size = new System.Drawing.Size(279, 42);
+            this.ReportStatusImageComboBoxEdit.Size = new System.Drawing.Size(333, 42);
             this.ReportStatusImageComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.ReportStatusImageComboBoxEdit.TabIndex = 10;
             // 
@@ -247,7 +248,7 @@ namespace CustomReports
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup1.Size = new System.Drawing.Size(474, 1093);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(537, 1192);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -265,70 +266,70 @@ namespace CustomReports
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.OptionsItemText.TextToControlDistance = 8;
-            this.layoutControlGroup2.Size = new System.Drawing.Size(424, 1043);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(487, 1142);
             // 
             // ItemForPathLib
             // 
             this.ItemForPathLib.Control = this.PathLibImageComboBoxEdit;
             this.ItemForPathLib.Location = new System.Drawing.Point(0, 0);
             this.ItemForPathLib.Name = "ItemForPathLib";
-            this.ItemForPathLib.Size = new System.Drawing.Size(424, 52);
+            this.ItemForPathLib.Size = new System.Drawing.Size(487, 52);
             this.ItemForPathLib.Text = "病理库";
-            this.ItemForPathLib.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForPathLib.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForSdrq1
             // 
             this.ItemForSdrq1.Control = this.Sdrq1DateEdit;
             this.ItemForSdrq1.Location = new System.Drawing.Point(0, 52);
             this.ItemForSdrq1.Name = "ItemForSdrq1";
-            this.ItemForSdrq1.Size = new System.Drawing.Size(424, 52);
+            this.ItemForSdrq1.Size = new System.Drawing.Size(487, 52);
             this.ItemForSdrq1.Text = "收到日期1";
-            this.ItemForSdrq1.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForSdrq1.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForSdrq2
             // 
             this.ItemForSdrq2.Control = this.Sdrq2DateEdit;
             this.ItemForSdrq2.Location = new System.Drawing.Point(0, 104);
             this.ItemForSdrq2.Name = "ItemForSdrq2";
-            this.ItemForSdrq2.Size = new System.Drawing.Size(424, 52);
+            this.ItemForSdrq2.Size = new System.Drawing.Size(487, 52);
             this.ItemForSdrq2.Text = "收到日期2";
-            this.ItemForSdrq2.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForSdrq2.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForBLH
             // 
             this.ItemForBLH.Control = this.BLHTextEdit;
             this.ItemForBLH.Location = new System.Drawing.Point(0, 156);
             this.ItemForBLH.Name = "ItemForBLH";
-            this.ItemForBLH.Size = new System.Drawing.Size(424, 52);
+            this.ItemForBLH.Size = new System.Drawing.Size(487, 52);
             this.ItemForBLH.Text = "病理号";
-            this.ItemForBLH.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForBLH.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
             this.ItemForName.Location = new System.Drawing.Point(0, 208);
             this.ItemForName.Name = "ItemForName";
-            this.ItemForName.Size = new System.Drawing.Size(424, 52);
+            this.ItemForName.Size = new System.Drawing.Size(487, 52);
             this.ItemForName.Text = "姓名";
-            this.ItemForName.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForName.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForValueDiff
             // 
             this.ItemForValueDiff.Control = this.ValueDiffTextEdit;
             this.ItemForValueDiff.Location = new System.Drawing.Point(0, 260);
             this.ItemForValueDiff.Name = "ItemForValueDiff";
-            this.ItemForValueDiff.Size = new System.Drawing.Size(424, 52);
+            this.ItemForValueDiff.Size = new System.Drawing.Size(487, 52);
             this.ItemForValueDiff.Text = "差异值 ≥";
-            this.ItemForValueDiff.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForValueDiff.TextSize = new System.Drawing.Size(136, 36);
             // 
             // ItemForReportStatus
             // 
             this.ItemForReportStatus.Control = this.ReportStatusImageComboBoxEdit;
             this.ItemForReportStatus.Location = new System.Drawing.Point(0, 312);
             this.ItemForReportStatus.Name = "ItemForReportStatus";
-            this.ItemForReportStatus.Size = new System.Drawing.Size(424, 731);
+            this.ItemForReportStatus.Size = new System.Drawing.Size(487, 830);
             this.ItemForReportStatus.Text = "报告状态";
-            this.ItemForReportStatus.TextSize = new System.Drawing.Size(127, 34);
+            this.ItemForReportStatus.TextSize = new System.Drawing.Size(136, 36);
             // 
             // gridControl1
             // 
@@ -337,7 +338,7 @@ namespace CustomReports
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1268, 1093);
+            this.gridControl1.Size = new System.Drawing.Size(1458, 1192);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -356,6 +357,7 @@ namespace CustomReports
             this.colF_XM,
             this.colF_AGE,
             this.colTBS_VALUE_DIFF,
+            this.col间隔天数,
             this.colF_SDRQ,
             this.colF_BLZD,
             this.colTBS_VALUE,
@@ -381,7 +383,7 @@ namespace CustomReports
             this.colF_BLK.Name = "colF_BLK";
             this.colF_BLK.Visible = true;
             this.colF_BLK.VisibleIndex = 2;
-            this.colF_BLK.Width = 131;
+            this.colF_BLK.Width = 137;
             // 
             // colE_BRLB
             // 
@@ -390,7 +392,7 @@ namespace CustomReports
             this.colE_BRLB.Name = "colE_BRLB";
             this.colE_BRLB.Visible = true;
             this.colE_BRLB.VisibleIndex = 3;
-            this.colE_BRLB.Width = 159;
+            this.colE_BRLB.Width = 167;
             // 
             // colF_BLH
             // 
@@ -399,7 +401,7 @@ namespace CustomReports
             this.colF_BLH.Name = "colF_BLH";
             this.colF_BLH.Visible = true;
             this.colF_BLH.VisibleIndex = 0;
-            this.colF_BLH.Width = 187;
+            this.colF_BLH.Width = 197;
             // 
             // colPreJcxx3
             // 
@@ -408,7 +410,7 @@ namespace CustomReports
             this.colPreJcxx3.Name = "colPreJcxx3";
             this.colPreJcxx3.Visible = true;
             this.colPreJcxx3.VisibleIndex = 1;
-            this.colPreJcxx3.Width = 187;
+            this.colPreJcxx3.Width = 197;
             // 
             // colF_XM
             // 
@@ -417,7 +419,7 @@ namespace CustomReports
             this.colF_XM.Name = "colF_XM";
             this.colF_XM.Visible = true;
             this.colF_XM.VisibleIndex = 4;
-            this.colF_XM.Width = 103;
+            this.colF_XM.Width = 107;
             // 
             // colF_AGE
             // 
@@ -426,7 +428,7 @@ namespace CustomReports
             this.colF_AGE.Name = "colF_AGE";
             this.colF_AGE.Visible = true;
             this.colF_AGE.VisibleIndex = 5;
-            this.colF_AGE.Width = 103;
+            this.colF_AGE.Width = 107;
             // 
             // colTBS_VALUE_DIFF
             // 
@@ -436,7 +438,15 @@ namespace CustomReports
             this.colTBS_VALUE_DIFF.Name = "colTBS_VALUE_DIFF";
             this.colTBS_VALUE_DIFF.Visible = true;
             this.colTBS_VALUE_DIFF.VisibleIndex = 6;
-            this.colTBS_VALUE_DIFF.Width = 131;
+            this.colTBS_VALUE_DIFF.Width = 137;
+            // 
+            // col间隔天数
+            // 
+            this.col间隔天数.FieldName = "间隔天数";
+            this.col间隔天数.Name = "col间隔天数";
+            this.col间隔天数.Visible = true;
+            this.col间隔天数.VisibleIndex = 7;
+            this.col间隔天数.Width = 167;
             // 
             // colF_SDRQ
             // 
@@ -444,8 +454,8 @@ namespace CustomReports
             this.colF_SDRQ.FieldName = "F_SDRQ";
             this.colF_SDRQ.Name = "colF_SDRQ";
             this.colF_SDRQ.Visible = true;
-            this.colF_SDRQ.VisibleIndex = 11;
-            this.colF_SDRQ.Width = 215;
+            this.colF_SDRQ.VisibleIndex = 12;
+            this.colF_SDRQ.Width = 227;
             // 
             // colF_BLZD
             // 
@@ -453,8 +463,8 @@ namespace CustomReports
             this.colF_BLZD.FieldName = "F_BLZD";
             this.colF_BLZD.Name = "colF_BLZD";
             this.colF_BLZD.Visible = true;
-            this.colF_BLZD.VisibleIndex = 9;
-            this.colF_BLZD.Width = 159;
+            this.colF_BLZD.VisibleIndex = 10;
+            this.colF_BLZD.Width = 167;
             // 
             // colTBS_VALUE
             // 
@@ -462,8 +472,8 @@ namespace CustomReports
             this.colTBS_VALUE.FieldName = "TBS_VALUE";
             this.colTBS_VALUE.Name = "colTBS_VALUE";
             this.colTBS_VALUE.Visible = true;
-            this.colTBS_VALUE.VisibleIndex = 7;
-            this.colTBS_VALUE.Width = 187;
+            this.colTBS_VALUE.VisibleIndex = 8;
+            this.colTBS_VALUE.Width = 197;
             // 
             // colPreJcxx
             // 
@@ -471,8 +481,8 @@ namespace CustomReports
             this.colPreJcxx.FieldName = "PreJcxx.F_SDRQ";
             this.colPreJcxx.Name = "colPreJcxx";
             this.colPreJcxx.Visible = true;
-            this.colPreJcxx.VisibleIndex = 12;
-            this.colPreJcxx.Width = 215;
+            this.colPreJcxx.VisibleIndex = 13;
+            this.colPreJcxx.Width = 227;
             // 
             // colPreJcxx1
             // 
@@ -480,8 +490,8 @@ namespace CustomReports
             this.colPreJcxx1.FieldName = "PreJcxx.TBS_VALUE";
             this.colPreJcxx1.Name = "colPreJcxx1";
             this.colPreJcxx1.Visible = true;
-            this.colPreJcxx1.VisibleIndex = 8;
-            this.colPreJcxx1.Width = 187;
+            this.colPreJcxx1.VisibleIndex = 9;
+            this.colPreJcxx1.Width = 197;
             // 
             // colPreJcxx2
             // 
@@ -489,16 +499,16 @@ namespace CustomReports
             this.colPreJcxx2.FieldName = "PreJcxx.F_BLZD";
             this.colPreJcxx2.Name = "colPreJcxx2";
             this.colPreJcxx2.Visible = true;
-            this.colPreJcxx2.VisibleIndex = 10;
-            this.colPreJcxx2.Width = 215;
+            this.colPreJcxx2.VisibleIndex = 11;
+            this.colPreJcxx2.Width = 227;
             // 
             // ZszlPCRReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 33F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "ZszlPCRReport";
-            this.Size = new System.Drawing.Size(1772, 1093);
+            this.Size = new System.Drawing.Size(2008, 1192);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
@@ -566,5 +576,6 @@ namespace CustomReports
         private DevExpress.XtraLayout.LayoutControlItem ItemForValueDiff;
         private DevExpress.XtraEditors.ImageComboBoxEdit ReportStatusImageComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForReportStatus;
+        private DevExpress.XtraGrid.Columns.GridColumn col间隔天数;
     }
 }

@@ -21,6 +21,25 @@ namespace CustomReports.Model
             }
         }
 
+        public double 间隔天数
+        {
+            get
+            {
+                var preJcxx = this.PreJcxx;
+                if (preJcxx == null) return 0;
+                var dt1 = Convert.ToDateTime(this.F_SDRQ);
+                var dt2 = Convert.ToDateTime(preJcxx.F_SDRQ);
+                try
+                {
+                    return (dt1 - dt2).TotalDays;
+                }
+                finally
+                {
+                }
+                return 0;
+            }
+        }
+
         public string F_FZ_BLZD { get; set; }
 
         [DisplayName("病历号")]
@@ -37,5 +56,6 @@ namespace CustomReports.Model
 
         [DisplayName("病理质控")]
         public string F_RNAZK { get; set; }
+
     }
 }
