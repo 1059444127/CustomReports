@@ -55,6 +55,9 @@ namespace CustomReports.Model
 
         [DisplayName("是否阳性")]
         public bool IsPositive { get; set; }
+
+        [DisplayName("危急值内容")]
+        public string CrisisText { get; set; }
     }
 
     /// <summary>

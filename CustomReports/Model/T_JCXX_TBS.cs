@@ -21,7 +21,7 @@ namespace CustomReports.Model
             }
         }
 
-        public double 间隔天数
+        public int 间隔天数
         {
             get
             {
@@ -31,7 +31,7 @@ namespace CustomReports.Model
                 var dt2 = Convert.ToDateTime(preJcxx.F_SDRQ);
                 try
                 {
-                    return (dt1 - dt2).TotalDays;
+                    return (int) ((dt1 - dt2).TotalDays-1);
                 }
                 finally
                 {

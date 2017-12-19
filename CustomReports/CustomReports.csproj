@@ -89,6 +89,12 @@
     <Compile Include="GzzsfyMonthlyReport.Designer.cs">
       <DependentUpon>GzzsfyMonthlyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZszlCrisisReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZszlCrisisReport.Designer.cs">
+      <DependentUpon>ZszlCrisisReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZszlTestDayReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,7 +136,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,6 +148,10 @@
     </Compile>
     <EmbeddedResource Include="GzzsfyMonthlyReport.resx">
       <DependentUpon>GzzsfyMonthlyReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZszlCrisisReport.resx">
+      <DependentUpon>ZszlCrisisReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ZszlTestDayReport.resx">
