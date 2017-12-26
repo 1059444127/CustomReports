@@ -58,6 +58,9 @@ namespace CustomReports.Model
 
         [DisplayName("危急值内容")]
         public string CrisisText { get; set; }
+
+        [DisplayName("医生姓名")]
+        public string 医生姓名 { get; set; }
     }
 
     /// <summary>

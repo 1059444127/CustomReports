@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbHelper.cs" />
+    <Compile Include="GxzlysgzlReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GxzlysgzlReport.Designer.cs">
+      <DependentUpon>GxzlysgzlReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="IReportControl.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,8 @@
     <Compile Include="Model\T_JCXX_DAL_TBS.cs" />
     <Compile Include="Model\T_JCXX_TBS.cs" />
     <Compile Include="Model\PathLibs.cs" />
+    <Compile Include="Model\T_YH.cs" />
+    <Compile Include="Model\T_YH_DAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Model\SqlFilter.cs" />
@@ -94,6 +102,12 @@
     </Compile>
     <Compile Include="ZszlCrisisReport.Designer.cs">
       <DependentUpon>ZszlCrisisReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZszlOutsideHspReport .cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZszlOutsideHspReport .Designer.cs">
+      <DependentUpon>ZszlOutsideHspReport .cs</DependentUpon>
     </Compile>
     <Compile Include="ZszlTestDayReport.cs">
       <SubType>UserControl</SubType>
@@ -119,11 +133,11 @@
     <Compile Include="ZszlYzxmReport.Designer.cs">
       <DependentUpon>ZszlYzxmReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZszlOutsideHspReport.cs">
+    <Compile Include="GxzlynblcxReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZszlOutsideHspReport.Designer.cs">
-      <DependentUpon>ZszlOutsideHspReport.cs</DependentUpon>
+    <Compile Include="GxzlynblcxReport.Designer.cs">
+      <DependentUpon>GxzlynblcxReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ZszlPCRReport.cs">
       <SubType>UserControl</SubType>
@@ -133,9 +147,14 @@
     </Compile>
     <Compile Include="Model\T_JCXX.cs" />
     <Compile Include="Model\T_JCXX_DAL.cs" />
+    <EmbeddedResource Include="GxzlysgzlReport.resx">
+      <DependentUpon>GxzlysgzlReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -154,6 +173,10 @@
       <DependentUpon>ZszlCrisisReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ZszlOutsideHspReport .resx">
+      <DependentUpon>ZszlOutsideHspReport .cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ZszlTestDayReport.resx">
       <DependentUpon>ZszlTestDayReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -170,8 +193,8 @@
       <DependentUpon>ZszlYzxmReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZszlOutsideHspReport.resx">
-      <DependentUpon>ZszlOutsideHspReport.cs</DependentUpon>
+    <EmbeddedResource Include="GxzlynblcxReport.resx">
+      <DependentUpon>GxzlynblcxReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ZszlPCRReport.resx">
@@ -179,6 +202,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\DataSources\CustomReports.Model.T_JCXX.datasource" />
+    <None Include="Properties\DataSources\GxzlynblcxReport.DataEntity.datasource" />
     <None Include="Properties\DataSources\GzzsfyMonthlyReport.ReportItem.datasource" />
     <None Include="Properties\DataSources\SqlFilter.datasource" />
     <None Include="Properties\Settings.settings">
