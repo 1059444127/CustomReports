@@ -61,8 +61,8 @@ namespace CustomReports
                 sb.Append("sum(case when t.f_tbszd like '%无上皮内病变或恶性病变%' then 1 else 0 end ) as NILM,");
                 sb.Append("sum(case when (f_tbszd like '%意义不明确的非典型性鳞状细胞%') and (f_tbszd <>'%高级别%') then 1 else 0 end ) as \"ASC-US\",");
                 sb.Append("sum(case when (f_tbszd like '%意义不明确的非典型性鳞状细胞%') and (f_tbszd LIKE '%高级别%') then 1 else 0 end ) as \"ASC-H\",");
-                sb.Append("sum(case when (f_tbszd like '%低级别鳞状上皮内病变胞%') and (f_tbszd <>'%不除外%') then 1 else 0 end ) as LSIL,");
-                sb.Append("sum(case when (f_tbszd like '%高级别鳞状上皮内病变胞%') and (f_tbszd <>'%不除外%') then 1 else 0 end ) as HSIL,");
+                sb.Append("sum(case when (f_tbszd like '%低级别鳞状上皮内病变细胞%') and (f_tbszd <>'%不除外%') then 1 else 0 end ) as LSIL,");
+                sb.Append("sum(case when (f_tbszd like '%高级别鳞状上皮内病变细胞%') and (f_tbszd <>'%不除外%') then 1 else 0 end ) as HSIL,");
                 sb.Append("sum(case when (f_tbszd like '%鳞状细胞癌%') and (f_tbszd  like '%浸润性%') then 1 else 0 end ) as \"Invasive SCC\",");
                 sb.Append("sum(case when f_tbszd like '%非典型腺细胞%' then 1 else 0 end ) as AGC,");
                 sb.Append("sum(case when f_tbszd like '%可疑腺癌%' then 1 else 0 end ) as 可疑腺癌,");
