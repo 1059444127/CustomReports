@@ -127,6 +127,12 @@
     <Compile Include="ZszlPositiveReport.Designer.cs">
       <DependentUpon>ZszlPositiveReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZsfySpecialDyeingReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZsfySpecialDyeingReport.Designer.cs">
+      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZszlYzxmReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,7 +160,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -187,6 +192,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ZszlPositiveReport.resx">
       <DependentUpon>ZszlPositiveReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZsfySpecialDyeingReport.resx">
+      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ZszlYzxmReport.resx">
