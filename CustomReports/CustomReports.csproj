@@ -97,6 +97,12 @@
     <Compile Include="GzzsfyMonthlyReport.Designer.cs">
       <DependentUpon>GzzsfyMonthlyReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZsfySpecialDyeingReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZsfySpecialDyeingReport.Designer.cs">
+      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ZszlCrisisReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,11 +133,11 @@
     <Compile Include="ZszlPositiveReport.Designer.cs">
       <DependentUpon>ZszlPositiveReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZsfySpecialDyeingReport.cs">
+    <Compile Include="ZsfyLctReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ZsfySpecialDyeingReport.Designer.cs">
-      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
+    <Compile Include="ZsfyLctReport.Designer.cs">
+      <DependentUpon>ZsfyLctReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ZszlYzxmReport.cs">
       <SubType>UserControl</SubType>
@@ -174,6 +180,10 @@
       <DependentUpon>GzzsfyMonthlyReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ZsfySpecialDyeingReport.resx">
+      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ZszlCrisisReport.resx">
       <DependentUpon>ZszlCrisisReport.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -194,8 +204,8 @@
       <DependentUpon>ZszlPositiveReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ZsfySpecialDyeingReport.resx">
-      <DependentUpon>ZsfySpecialDyeingReport.cs</DependentUpon>
+    <EmbeddedResource Include="ZsfyLctReport.resx">
+      <DependentUpon>ZsfyLctReport.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ZszlYzxmReport.resx">
